@@ -1,0 +1,23 @@
+## Question_8 
+import numpy as np
+import math 
+class Magnetic_Rigidity:
+    def __init__(self, gamma, rest_mass, beta, charge_state):
+        self.gamma = gamma
+        self.m = rest_mass
+        self.b = beta
+        self.q = charge_state
+    
+    def get_rigidity(self):
+        if self.q == 1:
+            print(((self.gamma)*(self.m)*(self.b*(3e8)))/(self.q*(1.602e-19)))
+        else:
+            print(((self.gamma)*(self.m*(1.66e-27))*(self.b*(3e8)))/(self.q*(1.602e-19)))
+
+q1_190MeV = Magnetic_Rigidity(1.204, 238.05, 0.55,28)
+q2_410MeV = Magnetic_Rigidity(1.440, 197, 0.719,77)
+q3_10GeV = Magnetic_Rigidity(19570.47, 9e-31, 0.9999999,1)
+
+q1_190MeV.get_rigidity()
+q2_410MeV.get_rigidity()
+q3_10GeV.get_rigidity()
